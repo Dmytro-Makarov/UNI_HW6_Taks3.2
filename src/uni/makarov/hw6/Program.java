@@ -8,10 +8,19 @@ public class Program {
             PizzaBuilder spicyPizzaBuilder = new SpicyPizzaBuilder();
             PizzaBuilder margaritaPizzaBuilder = new MargaritaPizzaBuilder();
 
-            waiter.setPizzaBuilder(margaritaPizzaBuilder);
+            waiter.setPizzaBuilder(hawaiianPizzaBuilder);
             waiter.constructPizza();
-
             Pizza pizza = waiter.getPizza();
             pizza.info();
+
+            waiter.setPizzaBuilder(spicyPizzaBuilder);
+            waiter.constructPizza();
+            Pizza pizza1 = waiter.getPizza();
+            pizza1.info();
+
+            waiter.setPizzaBuilder(margaritaPizzaBuilder);
+            waiter.constructPizza();
+            Pizza pizza2 = waiter.getPizza();
+            pizza2.info();
         }
 }
